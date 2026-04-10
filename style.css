@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #eef0f5;
+}
+
+/* ── Card ── */
+.container {
+  background: #fafbfc;
+  border: 1px solid #e2e5ec;
+  border-radius: 20px;
+  padding: 36px 30px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Heading ── */
+h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3142;
+  margin-bottom: 26px;
+}
+
+/* ── Form ── */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Labels ── */
+p {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #9198aa;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* ── Amount ── */
+.amount {
+  background: #f3f4f8;
+  border: 1.5px solid #e2e5ec;
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: border-color 0.2s;
+}
+
+.amount:focus-within {
+  border-color: #8b9fc4;
+}
+
+.amount p { margin-bottom: 3px; }
+
+.amount input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #2d3142;
+  letter-spacing: -0.02em;
+}
+
+.amount input::placeholder {
+  color: #c4c9d6;
+}
+
+/* ── Dropdown Row ── */
+.dropdown {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.from, .to {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── CHANGED: added position: relative to allow ::after chevron to anchor here ── */
+.select-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f8;
+  border: 1.5px solid #e2e5ec;
+  border-radius: 12px;
+  padding: 11px 13px;
+  transition: border-color 0.2s;
+}
+
+.select-container:focus-within {
+  border-color: #8b9fc4;
+}
+
+.select-container img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ── CHANGED: added padding-right so selected text doesn't overlap the chevron arrow ── */
+.select-container select {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #2d3142;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 22px;
+}
+
+.select-container select option {
+  background: #fff;
+  color: #2d3142;
+}
+
+/* ── CHANGED: new rule — draws the dropdown chevron arrow using CSS border trick ── */
+.select-container::after {
+  content: '';
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #6b7a99;
+  pointer-events: none;
+}
+
+/* ── Swap Button ── */
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e4e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-bottom: 2px;
+  transition: background 0.2s, transform 0.3s ease;
+}
+
+.icon:hover {
+  background: #d5dbe8;
+  transform: rotate(180deg);
+}
+
+.icon i {
+  color: #6b7a99;
+  font-size: 0.78rem;
+}
+
+/* ── Message ── */
+.message {
+  background: #f2f7f4;
+  border: 1.5px solid #c3d9cc;
+  border-radius: 10px;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #3d6b53;
+}
+
+/* ── Button ── */
+button[type="submit"] {
+  padding: 14px;
+  background: #5c7caa;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.93rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #4e6d97;
+  transform: translateY(-1px);
+}
+
+button[type="submit"]:active {
+  background: #415d82;
+  transform: translateY(0);
+}
+
+@media (max-width: 400px) {
+  .container { padding: 26px 18px; }
+  .amount input { font-size: 1.4rem; }
+}
