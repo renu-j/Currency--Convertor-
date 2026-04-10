@@ -3,7 +3,7 @@
 A simple and dynamic **Currency Converter** built using **HTML, CSS, and JavaScript**.
 This project fetches real-time exchange rates, updates country flags, and provides a smooth user experience with optimized API usage.
 
----
+
 
 ##  Features
 
@@ -13,7 +13,7 @@ This project fetches real-time exchange rates, updates country flags, and provid
 *  Swap currencies with one click
 *  Responsive and clean UI
 
----
+
 
 ##  Technologies Used
 
@@ -23,12 +23,13 @@ This project fetches real-time exchange rates, updates country flags, and provid
 * Currency API (CDN-based)
 * Flags API
 
----
+
 
 ##  Project Structure
 
-currency-convertor/
+currency-convertor
 │
+|
 ├── index.html       
 ├── style.css        
 ├── code.js         
