@@ -11,7 +11,6 @@ This project fetches real-time exchange rates, updates country flags, and provid
 *  Live exchange rates using API
 *  Dynamic country flags based on currency
 *  Swap currencies with one click
-*  Optimized performance using caching
 *  Responsive and clean UI
 
 ---
@@ -30,13 +29,13 @@ This project fetches real-time exchange rates, updates country flags, and provid
 
 currency-convertor/
 │
-├── index.html        # Main HTML file
-├── style.css         # Styling
-├── code.js           # Currency → Country mapping
-├── app.js            # Main logic (dropdown, API, swap, etc.)
-├── README.md         # Project documentation
+├── index.html       
+├── style.css        
+├── code.js         
+├── app.js         
+├── README.md        
 │
-└── images/           # Folder for screenshots
+└── images/           
      └── convertor.png
 
 # How It Works
@@ -72,7 +71,6 @@ finalAmount = amount × exchangeRate .
 
 
 # 5. Example Output
-![alt text](convertor.png)
 
 here is written example:
 
@@ -99,9 +97,9 @@ here is written example:
 # Future Improvements
 
 * Searchable dropdown
-*  Loading spinner
-*  Historical exchange rates
-*  Professional UI (Fintech style)
+* Loading spinner
+* Historical exchange rates
+* Professional UI (Fintech style)
 
 
 # Author
